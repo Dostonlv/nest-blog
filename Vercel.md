@@ -43,3 +43,5 @@ yozib olamiz
 
 ```vercel --prod```
 
+https://deploy-test-nest-vercel-ff47rzpvi-iamitachiuchiha.vercel.app/api/blog
+
