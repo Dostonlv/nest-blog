@@ -9,10 +9,10 @@ export class Blog {
     @Prop({required:true})
     title:string;
 
-    @Prop()
+    @Prop({required:true})
     excerpt:string;
 
-    @Prop()
+    @Prop({required:true})
     description:string;
 }
 

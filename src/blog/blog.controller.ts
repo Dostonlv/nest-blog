@@ -1,6 +1,6 @@
 import { BlogService } from './blog.service';
 import { BlogDto } from './dto/blog.dto';
-import { Body, Controller, Delete, Get, HttpCode, Param, Patch, Post } from '@nestjs/common';
+import { Body, Controller, Delete, Get, HttpCode, Param, Patch, Post, UsePipes, ValidationPipe } from '@nestjs/common';
 
 
 @Controller('blog')
@@ -15,6 +15,7 @@ export class BlogController {
 
     @HttpCode(201)
     @Post()
+    @UsePipes(ValidationPipe)
     async create(@Body() dto: BlogDto){
       return this.blogService.create(dto)
     }
